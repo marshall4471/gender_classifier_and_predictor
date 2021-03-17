@@ -9,7 +9,6 @@ Original file is located at
 
 from tensorflow.keras.models import load_model
 
-categories = ['1', '2', '3', '4', '5', '6', '7', '8', '9','10']
 
 import numpy as np
 
@@ -33,7 +32,6 @@ def prepare(image):
   new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
   return new_array.reshape(-1, IMG_SIZE, IMG_SIZE, 3)
 
-import matplotlib.pyplot as plt
 
 y=model.predict([prepare('rachael_mcadmas.jpg')])
 
