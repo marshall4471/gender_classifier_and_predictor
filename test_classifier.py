@@ -22,18 +22,18 @@ model=load_model('gender_pred2.h5')
 
 import tensorflow as tf
 
-image = 'rachael_mcadams.jpg'
+image = '.jpg'
 
 import cv2
 
 def prepare(image):
   IMG_SIZE=64
-  img_array = cv2.imread('rachael_mcadams.jpg', cv2.IMREAD_COLOR)
+  img_array = cv2.imread('.jpg', cv2.IMREAD_COLOR)
   new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
   return new_array.reshape(-1, IMG_SIZE, IMG_SIZE, 3)
 
 
-y=model.predict([prepare('rachael_mcadmas.jpg')])
+y=model.predict([prepare('.jpg')])
 
 print(y)
 
